@@ -94,12 +94,12 @@ void beginning(){
 	cout << "Te has despertado y te estan atacando...\n";
 	
 	enemy troll;
-	enemy caballo;
+	troll.byDefault();
 	
 	player plr;
 	plr.byDefault();
 	
-	troll.byDefault();
+	
 	
 		do {
 		int user;
@@ -112,9 +112,8 @@ void beginning(){
 			if(troll.verVida() > 0){
 				int total = plr.ataque + plr.fuerza;
 				troll.mod(-total, 0, 0, 0);
-				cout << "El enemigo ha perdido "
-				<< total << " puntos de salud!\n"
-				<< endl;
+				cout << "El enemigo ha perdido " << total
+				<< " puntos de salud!\n" << endl;
 				if(troll.verVida() <= 0){
 					cout << "Enemigo abatido!" << endl;
 					break;
@@ -122,9 +121,8 @@ void beginning(){
 			}
 		}else if(user == 2){// usar magia contra enemigo
 			if (plr.mana > 0){
-				cout << "El enemigo ha perdido "
-				<< plr.magia << " puntos de salud!\n"
-				<< endl;
+				cout << "El enemigo ha perdido " << plr.magia
+				<< " puntos de salud!\n" << endl;
 				plr.mana -= 10;
 				troll.mod(-plr.magia,0, 0, 0);
 			}else{
@@ -142,14 +140,11 @@ void beginning(){
 	if(troll.verVida() > 0){
 		if(plr.vida > 0){
 			int total = troll.verAtaque() + troll.verFuerza();
-			cout << "Enemigo: "<< " Salud: " << troll.verVida()
-			<< endl;
+			cout << "Enemigo: "<< " Salud: " << troll.verVida() << endl;
 	
 			cout << "El enemigo ataca..." << endl;
 			plr.vida -= total;
-			cout << "Has perdido "
-			<< total << " puntos de salud!\n"
-			<< endl;
+			cout << "Has perdido " << total << " puntos de salud!\n" << endl;
 			if (plr.vida <= 0){
 				cout << "Has caido!\n";
 				system("pause");
