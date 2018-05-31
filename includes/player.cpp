@@ -1,9 +1,9 @@
 #include "player.hpp"
 
-player::player(){
+Player::Player(){
 }
 
-void player::byDefault(){
+void Player::byDefault(){
 	vida = 100;
 	mana = 20;
 	magia = 20;
@@ -11,38 +11,38 @@ void player::byDefault(){
 	ataque = 10;
 }
 		
-void player::setVida(int v){
+void Player::setVida(int v){
 	vida += v;
 }
-void player::setMana(int m){
+void Player::setMana(int m){
 	mana += m;
 }
-void player::setMagia(int mag){
+void Player::setMagia(int mag){
 	magia += mag;
 }
-void player::setFuerza(int f){
+void Player::setFuerza(int f){
 	fuerza += f;
 }
-void player::setAtaque(int a){
+void Player::setAtaque(int a){
 	ataque += a;
 }
 		
-int player::getVida(){
+int Player::getVida(){
 	return vida;
 }
-int player::getAtaque(){
+int Player::getAtaque(){
 	return ataque;
 }
-int player::getFuerza(){
+int Player::getFuerza(){
 	return fuerza;
 }
-int player::getMana(){
+int Player::getMana(){
 	return mana;
 }
-int player::getMagia(){
+int Player::getMagia(){
 	return magia;
 }
-std::string player::setPlayerName(){
+std::string Player::setPlayerName(){
 	std::cin >> nombre;
 	return nombre;
 }

@@ -1,7 +1,7 @@
 #ifndef ENEMY_HPP
 #define ENEMY_HPP
 
-class enemy{
+class Enemy{
 	private:
 		int inventario[10];
 		std::string nombre;
@@ -13,7 +13,7 @@ class enemy{
 		
 	public:
 		public:	
-		enemy();
+		Enemy();
 		void byDefault();
 		void setVida(int v);
 		void setMana(int m);

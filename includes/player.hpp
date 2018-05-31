@@ -3,7 +3,7 @@
 #define PLAYER_HPP
 
 
-class player{
+class Player{
 	private:
 		int inventario[10];
 		std::string nombre;
@@ -14,7 +14,7 @@ class player{
 		int ataque;
 
 	public:	
-		player();
+		Player();
 		void byDefault();
 		void setVida(int v);
 		void setMana(int m);

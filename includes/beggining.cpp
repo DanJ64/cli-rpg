@@ -1,10 +1,10 @@
 void beginning(){
 	cout << "Te has despertado y te estan atacando...\n";
-	cout << "Un troll a aparecido\n";
-	enemy troll;
-	troll.byDefault();
+	cout << "Un penguin a aparecido\n";
+	Enemy penguin;
+	penguin.byDefault();
 	
-	player plr;
+	Player plr;
 	plr.byDefault();
 	
 		do {
@@ -15,12 +15,12 @@ void beginning(){
 			cout << "Introduce accion: ";
 			cin >> user;
 			if(user == 1){//ataque al enemigo
-				if(troll.getVida() > 0){
+				if(penguin.getVida() > 0){
 					int total = plr.getAtaque() + plr.getFuerza();
-					troll.setVida(-total);
+					penguin.setVida(-total);
 					cout << "El enemigo ha perdido " << total
 					<< " puntos de salud!\n" << endl;
-					if(troll.getVida() <= 0){
+					if(penguin.getVida() <= 0){
 						cout << "Enemigo abatido!" << endl;
 						break;
 					}
@@ -30,7 +30,7 @@ void beginning(){
 					cout << "El enemigo ha perdido " << plr.getMagia()
 					<< " puntos de salud!\n" << endl;
 					plr.setMana(-10);
-					troll.setVida(-plr.getMagia());
+					penguin.setVida(-plr.getMagia());
 				}else{
 					cout << "No tienes mana suficiente!\n" << endl;
 				}
@@ -43,10 +43,10 @@ void beginning(){
 			system("cls");
 	
 			//Ataque del enemigo
-			if(troll.getVida() > 0){
+			if(penguin.getVida() > 0){
 				if(plr.getVida() > 0){
-					int total = troll.getAtaque() + troll.getFuerza();
-					cout << "Enemigo: "<< " Salud: " << troll.getVida() << endl;
+					int total = penguin.getAtaque() + penguin.getFuerza();
+					cout << "Enemigo: "<< " Salud: " << penguin.getVida() << endl;
 			
 					cout << "El enemigo ataca..." << endl;
 					
@@ -69,7 +69,7 @@ void beginning(){
 	}while(plr.getVida() > 0);
 	
 	system("cls");
-	if(troll.getVida() <= 0){
+	if(penguin.getVida() <= 0){
 		cout << "Has ganado!" << endl;
 	}else{
 		cout << "Te acaban de joder el dia...\n";

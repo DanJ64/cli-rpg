@@ -1,9 +1,9 @@
 #include "enemy.hpp"
 
-enemy::enemy(){
+Enemy::Enemy(){
 }
 
-void enemy::byDefault(){
+void Enemy::byDefault(){
 			vida = 100;
 			mana = 20;
 			magia = 10;
@@ -11,34 +11,34 @@ void enemy::byDefault(){
 			ataque = 10;
 		}
 		
-void enemy::setVida(int v){
+void Enemy::setVida(int v){
 	vida += v;
 }
-void enemy::setMana(int m){
+void Enemy::setMana(int m){
 	mana += m;
 }
-void enemy::setMagia(int mag){
+void Enemy::setMagia(int mag){
 	magia += mag;
 }
-void enemy::setFuerza(int f){
+void Enemy::setFuerza(int f){
 	fuerza += f;
 }
-void enemy::setAtaque(int a){
+void Enemy::setAtaque(int a){
 	ataque += a;
 }
-int enemy::getVida(){
+int Enemy::getVida(){
 	return vida;
 }
-int enemy::getAtaque(){
+int Enemy::getAtaque(){
 	return ataque;
 }
-int enemy::getFuerza(){
+int Enemy::getFuerza(){
 	return fuerza;
 }
-int enemy::getMana(){
+int Enemy::getMana(){
 	return mana;
 }
-int enemy::getMagia(){
+int Enemy::getMagia(){
 	return magia;
 }
 

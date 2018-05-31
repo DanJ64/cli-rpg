@@ -8,7 +8,7 @@ using namespace std;
 
 int main(){
 	cout << "Como te llamas? ";
-	player plr;
+	Player plr;
 	cout << "Bienvenido " << plr.setPlayerName() << endl;
 	
 	beginning();
